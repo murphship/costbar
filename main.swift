@@ -887,6 +887,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             button.title = "$…"
             button.font = NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .medium)
+            // Small chart glyph before the dollar amount so the menu bar reads as an
+            // icon + value, not bare text. Template image adapts to light/dark menu bars.
+            let cfg = NSImage.SymbolConfiguration(pointSize: 12, weight: .semibold)
+            if let img = NSImage(systemSymbolName: "chart.bar.fill", accessibilityDescription: "CostBar")?
+                .withSymbolConfiguration(cfg) {
+                img.isTemplate = true
+                button.image = img
+                button.imagePosition = .imageLeading
+                button.imageHugsTitle = true
+            }
             button.action = #selector(togglePopover(_:))
             button.target = self
         }

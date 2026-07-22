@@ -36,9 +36,10 @@ fi
 
 echo "Assembling bundle..."
 rm -rf "$APP"
-mkdir -p "$APP/Contents/MacOS"
+mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 cp Info.plist "$APP/Contents/"
 cp build/CostBar "$APP/Contents/MacOS/"
+[ -f CostBar.icns ] && cp CostBar.icns "$APP/Contents/Resources/"
 
 codesign --force --sign - "$APP"
 
