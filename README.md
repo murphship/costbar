@@ -43,10 +43,10 @@ Requires macOS 14+ and [Claude Code](https://claude.com/claude-code) installed a
 ### Recommended — one line, no Xcode
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/wmurphy-sketch/costbar/main/download-install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/murphship/costbar/main/download-install.sh | bash
 ```
 
-Downloads the prebuilt universal app (arm64 + x86_64) from the latest [release](https://github.com/wmurphy-sketch/costbar/releases), de-quarantines it, drops it in `/Applications`, and launches it. No compiling, no Xcode, no Swift-version requirement.
+Downloads the prebuilt universal app (arm64 + x86_64) from the latest [release](https://github.com/murphship/costbar/releases), de-quarantines it, drops it in `/Applications`, and launches it. No compiling, no Xcode, no Swift-version requirement.
 
 First time it reads your Claude Code credential, macOS shows a Keychain prompt — click **Always Allow**.
 
@@ -55,7 +55,7 @@ First time it reads your Claude Code credential, macOS shows a Keychain prompt �
 Needs Xcode Command Line Tools (`xcode-select --install`) with a Swift toolchain matching your SDK. On macOS beta releases this can require the full Xcode — if so, use the prebuilt installer above instead.
 
 ```bash
-git clone https://github.com/wmurphy-sketch/costbar.git
+git clone https://github.com/murphship/costbar.git
 cd costbar && bash install.sh
 ```
 

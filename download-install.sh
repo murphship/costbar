@@ -1,9 +1,9 @@
 #!/bin/bash
 # CostBar — download the prebuilt app. No Xcode, no compiling, no clone.
-#   curl -fsSL https://raw.githubusercontent.com/wmurphy-sketch/costbar/main/download-install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/murphship/costbar/main/download-install.sh | bash
 set -euo pipefail
 
-REPO="wmurphy-sketch/costbar"
+REPO="murphship/costbar"
 APP="/Applications/CostBar.app"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
